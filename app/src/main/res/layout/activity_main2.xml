@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity2">
+
+
+
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_marginTop="30dp"
+        android:id="@+id/spinner"
+        android:fontFamily="@font/bricolage_grotesque_semibold"
+        android:entries="@array/my_items"
+        android:layout_marginHorizontal="30dp"
+        android:layout_height="wrap_content"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_below="@+id/spinner"
+        android:orientation="horizontal"
+        android:layout_marginTop="50dp"
+        android:id="@+id/info_panle"
+        android:layout_marginHorizontal="40dp"
+        android:layout_height="wrap_content">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="50dp"
+            android:layout_gravity="center_vertical"
+
+            android:src="@drawable/h"
+            android:layout_height="50dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:layout_gravity="center_vertical"
+            android:text="Hello Jane Smith 2020"
+            android:textSize="24sp"
+            android:fontFamily="@font/bricolage_grotesque_semibold"
+            android:layout_height="wrap_content"/>
+
+
+
+
+
+    </LinearLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/SearchTextFiedl"
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="35dp"
+        android:layout_below="@+id/info_panle"
+        android:layout_marginTop="10dp"
+        app:boxCornerRadiusBottomEnd="40dp"
+        app:boxCornerRadiusTopEnd="40dp"
+        app:boxCornerRadiusBottomStart="40dp"
+        app:boxCornerRadiusTopStart="40dp"
+        android:layout_height="wrap_content"
+        app:endIconDrawable="@drawable/twotone_alarm_24"
+        app:startIconDrawable="@drawable/twotone_alarm_24"
+        android:hint="Where are we off to?">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/scrollchip"
+        android:layout_below="@id/SearchTextFiedl"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="40dp"
+        android:scrollbars="none">
+
+        <com.google.android.material.chip.ChipGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:singleSelection="true"
+            app:checkedChip="@id/chip_all">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_all"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="All"
+                android:layout_margin="5dp"
+                android:fontFamily="@font/bricolage_grotesque_semibold"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_music"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Music"
+                android:layout_margin="5dp"
+                android:fontFamily="@font/bricolage_grotesque_semibold"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_sports"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sports"
+                android:layout_margin="5dp"
+                android:fontFamily="@font/bricolage_grotesque_semibold"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_community"
+                style="@style/Widget.MaterialComponents.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Community"
+                android:layout_margin="5dp"
+                android:fontFamily="@font/bricolage_grotesque_semibold"/>
+
+        </com.google.android.material.chip.ChipGroup>
+
+    </HorizontalScrollView>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:gravity="center"
+        android:layout_below="@id/scrollchip"
+        android:textColor="@color/black"
+        android:layout_gravity="center_vertical"
+        android:layout_marginHorizontal="30dp"
+        android:text="Hello Jane Smith 2020"
+        android:textSize="24sp"
+        android:fontFamily="@font/bricolage_grotesque_semibold"
+        android:layout_height="wrap_content"/>
+
+
+
+</RelativeLayout>
